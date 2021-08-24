@@ -12,11 +12,11 @@ from botocore.exceptions import ClientError
 # In[3]:
 
 
-#Create S3 bucket - in a production systems you should avoid hard coding your AWS access and secret keys
+#Create S3 bucket - in production systems you should avoid hard coding your AWS access and secret keys
 AWS_ACCESS_KEY_ID = '<ACCESS_KEY>'
 AWS_SECRET_ACCESS_KEY = '<SECRET_KEY>'
 
-#Create a s3 client object
+#Create an s3 client object
 s3_client = boto3.client('s3', region_name ='eu-west-2',
                         aws_access_key_id = AWS_ACCESS_KEY_ID,
                         aws_secret_access_key = AWS_SECRET_ACCESS_KEY)
@@ -24,7 +24,7 @@ s3_client = boto3.client('s3', region_name ='eu-west-2',
 #Specify location of the s3 bucket using the Configuration parameter
 location = {'LocationConstraint': 'eu-west-2'}
 
-#Use the s3 client to create_bucket method to create a bucket
+#Use the s3 client create_bucket method to create a bucket
 s3_client.create_bucket(Bucket = 'my-python-boto3-project',
                        CreateBucketConfiguration = location)
 
