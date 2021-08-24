@@ -1,2 +1,2 @@
-# aws-s3-python-and-boto3-1-00
+# aws-s3-python-and-boto3
 AWS S3 with Python boto3
